@@ -1,0 +1,164 @@
+@import '../_var'
+
+.banner
+    &.about-banner
+        .bg 
+            height: 100vh
+            @include media(768)
+                height: 80vh 
+            @include media(540)
+                height: 50vh
+            .banner-wrapper
+                left: 50%
+                top: unset
+                bottom: 0%
+                transform: translate(-50%, 0%)
+                @include media(768)
+                    width: 100%
+                .container
+                    .heading
+                        text-align: center
+                        svg
+                            margin-bottom: 30px
+                            @include media(768)
+                                display: none
+                        h3
+                            font-size: 16px
+                            font-weight: 400
+                            letter-spacing: 10px
+                            padding-bottom: 30px
+
+.about-secA
+    padding: 9.5rem 0 10.5rem
+    @include media(991)
+        padding: 8.5rem 0 9.5rem
+    @include media(768)
+        padding: 5rem 0 7rem
+    @include media(540)
+        padding: 2rem 0 
+    .heading
+        margin-bottom: 32px
+        h3
+            text-transform: uppercase
+            letter-spacing: 4px
+            color: #000
+            font-size: 40px
+            @include media(768)
+                font-size: 32px
+            @include media(540)
+                font-size: 24px
+    .content
+        max-width: 915px
+        margin: 0 auto
+        text-align: center
+        color: $text
+        font-size: 20px
+        @include media(768)
+            font-size: 18px
+        @include media(540)
+            font-size: 16px
+        h3
+            text-transform: uppercase
+            letter-spacing: 4px
+            color: #000
+            font-size: 40px
+            margin-bottom: 25px
+            @include media(768)
+                font-size: 32px
+                margin-bottom: 20px
+            @include media(540)
+                font-size: 24px
+                margin-bottom: 15px
+
+.about-secB
+    @include flex
+    @include media(768)
+        flex-direction: column
+    figure
+        flex: 0 1 52%
+        max-width: 52%
+        width: 10%
+        position: relative
+        line-height: 0
+        @include media(768)
+            flex: 0 1 100%
+            max-width: 100%
+            width: 100%
+        >img
+            width: 100%
+        .ico
+            position: absolute
+            top: 50px
+            right: 50px
+            line-height: 0
+            @include media(768)
+                display: none
+    figcaption
+        flex: 1
+        display: flex
+        align-items: center
+        @include media(768)
+            padding: 40px 0 
+        @include media(540)
+            padding: 30px 0 
+        .content
+            max-width: 585px
+            padding: 0 2rem
+            text-align: center
+            margin: 0 auto
+            @include media(768)
+                padding: 0 25px
+            @include media(540)
+                padding: 0 15px
+            .heading
+                margin-bottom: 30px
+                font-size: 24px 
+                h2
+                    text-transform: uppercase
+                    letter-spacing: 4px
+                    color: #000
+                    @include media(768)
+                        font-size: 32px
+                    @include media(540)
+                        font-size: 24px
+            .desc
+                color: $text
+                font-size: 16px
+
+.about-secA.about-secC
+    padding: 70px 0 
+    @include media(991px)    
+        padding: 60px 0 
+    @include media(768px)
+        padding: 50px 0
+    @include media(540)
+        padding: 40px 0 
+    .content
+        max-width: 750px
+
+.about-secB.video-sec
+    figure
+        video
+            width: 100%
+            height: 100%
+            object-fit: cover
+    figcaption
+        padding: 7rem 0
+        @include media(991px)    
+            padding: 6rem 0
+        @include media(768)    
+            padding: 5rem 0
+        @include media(540px)    
+            padding: 3rem 0
+
+.secsrch-cjrvs-sec
+    .upper-sec
+        .heading
+            h3
+                font-size: 30px
+                color: #000
+                @include media(768)
+                    font-size: 24px
+                @include media(540)
+                    font-size: 20px 
+

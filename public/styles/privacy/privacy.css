@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.privacy-secA {
+  padding: 4rem 0;
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA {
+    padding: 3rem 0;
+  }
+}
+.privacy-secA .website-content h4 {
+  margin: 10px 0;
+}
+.privacy-secA .website-content p {
+  margin-bottom: 10px;
+}
+
+.banner.thank-you-banner .bg {
+  height: 100vh;
+}
+.banner.thank-you-banner .banner-wrapper {
+  top: 50%;
+  translate: 0 -50%;
+}
+.banner.thank-you-banner .banner-wrapper .content {
+  max-width: 435px;
+  margin: 0 auto;
+}
+.banner.thank-you-banner .banner-wrapper .content h1 {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.banner.thank-you-banner .banner-wrapper .content p {
+  margin-bottom: 3rem;
+  max-width: 345px;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=privacy.css.map */

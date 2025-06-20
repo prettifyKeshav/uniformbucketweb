@@ -1,0 +1,719 @@
+@import '../_var'
+@import '../_form'
+.listing-banner
+    .bg
+        height: 100vh
+        @include media(768)
+            height: 90vh
+        @include media(540)
+            height: 70vh
+    .banner-wrapper
+        top: 70%
+        translate: 0 -70%
+        .heading
+            max-width: 530px
+            margin: 0 auto
+            text-align: center
+            @include media(768)
+                max-width: 380px
+            h3
+                font-size: 36px
+                line-height: 1.2
+                letter-spacing: 4px
+                color: #fff
+                font-weight: 600
+                padding-bottom: 10px
+                @include media(540)
+                    font-size: 20px
+            p
+                font-size: 18px
+                line-height: 1.5
+                color: #fff
+                @include media(540)
+                    font-size: 15px
+
+.list-filter-wrap
+    --filterheight: 45px
+    --bordercolor: #E0E0E038
+    border-top: 1px solid #ffffff24
+    @include media-min(991)
+    position: sticky
+    top: calc(var(--headerfixed))
+    left: 0
+    right: 0 
+    z-index: 3
+    background: var(--gradient-b)
+    height: 100%
+    @include media(991)
+        --bordercolor: #66666652
+        top: calc(var(--headerfixed) - 1px)
+        z-index: 5
+    .list-filter
+        display: flex
+        @include media(991)
+            justify-content: space-between
+        .colA
+            padding: 0 25px
+            border-right: 1px solid var(--bordercolor)
+            pointer-events: none
+            @include media(991)
+                pointer-events: all
+                padding-left: 0
+            @include media(675)
+                padding-right: 15px
+            @include media(345)
+                padding-right: 13px
+            @include media(320)
+                padding-right: 10px
+            .filtr-btn
+                height: var(--filterheight)
+                line-height: 0
+        .colB
+            flex: 1
+            @include media(991)
+                right: 0
+                transform: translateX(100%)
+                transition: .5s ease
+            &.is-open
+                @include media(991)
+                    transform: translateX(0%)
+            .close
+                @include media(991)
+                    left: 25px
+                    right: auto
+            .fltr-ggf
+                display: flex
+                @include media(991)
+                    display: block
+                    padding: 70px 0 0
+                    height: 100%
+                    overflow-y: auto
+                    position: relative
+                // .kmr-select-wrap
+                //     .label
+                //     @include media(991)
+                //         @include font(500)
+                //         color: var(--black)
+                //         background-image: url(../../icon/arrow-down-gray.svg)
+                .btn-mbl-btm
+                    display: flex
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    z-index: 2
+                    @include media-min(991)
+                        display: none
+                    .aplly-btn,.clr-btn
+                        flex: 1
+                        --height: 44px
+                        background: var(--primary)
+                        color: $white
+                        border-radius: 0px
+                        height: var(--height)
+                        font-size: 14px
+                    >*
+                        border: none
+                        &:not(:last-child)
+                            border-right: 1px solid rgb(256 256 256 / .6)
+        .kmr-select-wrap
+            --labelheight: var(--filterheight)
+            padding: 0 25px
+            @include media(991)
+                width: 100%
+            &:not(.sort_by)
+                @include media-min(991)
+                    border-right: 1px solid var(--bordercolor)
+                @include media(991)
+                    border-top: 1px solid var(--bordercolor)
+                .label
+                    @include media(991)
+                        @include font(500)
+                        color: var(--black)
+                        background-image: url(../../icon/arrow-down-gray.svg)
+                .kmr-select-menu
+                    @include media(991)
+                        position: unset
+                        width: 100%
+                        box-shadow: none
+                        padding-top: 8px
+                        padding-bottom: 8px
+            &.sort_by
+                @include media(991)
+                    padding-right: 0
+.product-listing-secA
+    padding: 35px 0 90px
+    .product-list-grid
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        grid-gap: 70px 20px
+        @include media(991)
+            grid-template-columns: repeat(3,1fr)
+            grid-gap: 40px 15px
+        @include media(767)
+            grid-template-columns: repeat(2,1fr)
+            grid-gap: 30px 15px
+        @include media(675)
+            grid-gap: 30px 12px
+    .btn-div
+        margin-top: 120px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 7px
+        svg
+            path 
+                fill: #000
+        .load_btn
+            --height: 44px
+            font-size: 16px
+            line-height: 1.2
+            letter-spacing: 4px
+            color: #000
+            text-transform: uppercase
+
+.product-listing-secA
+    padding: 3rem 0 7.5rem
+    @include media(991)
+        padding: 3rem 0 5.5rem
+    .product-grid-wrap
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        grid-gap: 80px 16px
+        @include media(991)
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 50px 16px
+        @include media(768)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 30px 15px
+        @include media(540)
+            grid-template-columns: repeat(1, 1fr)
+        .product-col
+            &:hover
+                figcaption
+                    .color-select-wrap
+                        transform: translateY(0)
+            figcaption
+                padding: 10px 20px 0
+                overflow: hidden
+                .color-select-wrap
+                    padding-bottom: 0
+                    transform: translateY(-33px)
+                    transition: .5s ease
+                    li
+                        span
+                            width: 15px
+                            height: 15px
+                            &::before
+                                width: 21px
+                                height: 21px
+                    input
+                        &:checked
+                            ~ span
+                                &::before
+                                    opacity: 1
+
+.load-more-btn
+    margin-top: 5rem
+    p
+        color: $primary
+        margin-top: 26px
+
+// Product detail
+
+.product-detail-container
+    margin-top: var(--headerheight)
+    border-bottom: 1px solid #CDCDCD
+    .breadcrumps
+        li
+            display: inline-block
+            vertical-align: middle
+        li:first-child, li:last-child
+            @include media(540)
+                display: none
+        li
+            &:nth-last-child(2)
+                &::before
+                    @include media(540)
+                        display: none
+                
+        a
+            color: $text
+            font-size: 14px
+            @include media(520)
+                font-size: 12px 
+                text-overflow: ellipsis
+            &.active
+                color: var(--colortext)
+    .detail-product-wrap
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 35px
+        margin-top: 35px
+        padding-bottom: 80px
+        @include media(991)
+            grid-template-columns: repeat(1, 1fr)
+        @include media(768)
+            padding-bottom: 40px
+        @include media(540)
+            margin-top: 15px
+            grid-gap: 20px
+            padding-bottom: 20px
+        .colA
+            .product-image-wrap
+                display: grid
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+                grid-gap: 10px
+                @include media(768)
+                    grid-template-columns: repeat(2, 1fr)
+                .pro-img
+                    line-height: 0
+        .colB
+            .pro_title
+                font-size: 28px
+                line-height: 1.2
+                color: #000
+                margin-bottom: 20px
+                @include media(540)
+                    font-size: 22px
+                    margin-bottom: 10px
+            .pro_price_col
+                margin-bottom: 40px
+                @include media(540) 
+                    margin-bottom: 20px
+                li
+                    display: inline-block
+                    vertical-align: middle
+                    &:not(:last-child)
+                        margin-right: 15px
+                .sp
+                    font-size: 20px
+                    line-height: 1.2
+                    font-weight: 400
+                    color: #000
+                    @include media(540) 
+                        font-size: 18px
+                .mrp
+                    font-size: 20px
+                    line-height: 1.2
+                    font-weight: 400
+                    color: #666666
+                    text-decoration: line-through
+                    @include media(540) 
+                        font-size: 18px
+                .discount
+                    font-size: 16px
+                    line-height: 1.2
+                    font-weight: 600
+                    color: var(--colortext)
+            .discl
+                font-size: 15px
+                line-height: 1.2
+                color: #666
+                @include media(540) 
+                    font-size: 14px
+            .color-col
+                margin-bottom: 20px
+                h6
+                    font-size: 14px
+                    line-height: 1.2
+                    letter-spacing: 4px
+                    font-weight: 500
+                    margin-bottom: 10px
+                    color: #000
+                    font-family: $LeJ
+                    text-transform: uppercase
+                .select-option
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    max-width: 550px
+                    gap: 50px
+                    .color-select-wrap
+                        li
+                            display: inline-block
+                            vertical-align: middle
+                            position: relative
+                            &:not(:last-child)
+                                margin-right: 15px
+                            &:has(input:checked)
+                                span
+                                    &::before
+                                        opacity: 1
+                            span
+                                display: inline-block
+                                width: 15px
+                                height: 15px
+                                background-color: #000
+                                border-radius: 50%
+                                position: relative
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    left: -3px
+                                    bottom: -3px
+                                    width: 21px
+                                    height: 21px
+                                    border: 1px solid #000
+                                    border-radius: 50%
+                                    opacity: 0
+                            input
+                                position: absolute
+                                left: 0
+                                right: 0
+                                top: 0
+                                bottom: 0
+                                width: 100%
+                                height: 100%
+                                z-index: 2
+                                appearance: none
+                                opacity: 0
+                                &:checked
+                                    ~ span
+                                        &::before
+                                            opacity: 1
+                    .value-wrap
+                        display: flex
+                        align-items: center
+                        border: 1px solid #B4B1B1
+                        padding: 5px 20px
+                        border-radius: 50px
+                        @include media(540) 
+                            padding: 5px 10px
+                        .minus-val, .plus-val
+                            width: 20px
+                            height: 20px
+                            text-align: center
+                            border: none
+                            background: none
+                            font-size: 28px
+                            font-weight: 500
+                            line-height: 20px 
+                            &.disabled
+                                opacity: 0.2
+                                cursor: no-drop
+                        .count-val
+                            font-size: 22px
+                            width: 90px
+                            border: 0
+                            background: none
+                            text-align: center
+                            @include media(540) 
+                                width: 50px
+                                font-size: 18px
+                            
+            .size-chart-wrap
+                .size-title
+                    display: flex
+                    align-items: center
+                    gap: 30px
+                    h6
+                        font-size: 14px
+                        line-height: 1.2
+                        letter-spacing: 4px
+                        font-weight: 500
+                        font-family: $LeJ
+                        color: #000
+                        text-transform: uppercase
+                    .chart-btn
+                        display: inline-flex
+                        align-items: center
+                        gap: 6px
+                        font-size: 14px
+                        line-height: 1.2
+                        color: $text
+                .select-size
+                    display: flex
+                    width: 100%
+                    flex-wrap: wrap
+                    gap: 16px
+                    margin: 25px 0 50px
+                    --size: 42px
+                    @include media(540)
+                        margin: 15px 0 20px
+                    li
+                        width: var(--size)
+                        height: var(--size)
+                        border: 1px solid #C7C7C7
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border-radius: 50%
+                        position: relative
+                        // &:has(input:checked)
+                        //         span
+                        //             &::before
+                        //                 opacity: 1
+                        input
+                            position: absolute
+                            top: 0
+                            right: 0
+                            bottom: 0
+                            left: 0
+                            width: 100%
+                            height: 100%
+                            appearance: none 
+                            opacity: 0 
+                            z-index: 1
+                            &.checkmark_a1
+                                ~ span
+                                    &::before
+                                        opacity: 1
+                        span
+                            display: inline-block
+                            font-size: 14px
+                            height: var(--size)
+                            line-height: var(--size)
+                            color: $text
+                            &::before
+                                content: ""
+                                width: 100%
+                                position: absolute
+                                left: 0
+                                top: 50%
+                                height: 1px
+                                background-color: #B0B0B0
+                                transform: rotate(146deg)
+                                opacity: 0
+            .pro-btn-wrap
+                display: flex
+                align-items: center
+                gap: 15px
+                margin-bottom: 65px
+                --height: 36px
+                max-width: 550px
+                @include media(768)
+                    margin-bottom: 40px
+                @include media(540)
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-gap: 8px
+                    margin-bottom: 20px
+                .btn2
+                    flex: 1
+                    @include media(768)
+                        height: 36px
+                    @include media(540)
+                        --padding: 10px
+                .addto-btn
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: 1px solid var(--colortext)
+                    height: var(--height)
+                    padding: 10px
+                    &.wish
+                        svg
+                            path 
+                                stroke: var(--primary)
+                    svg, img
+                        width: 25px
+                        height: 25px
+            .summery-detail-content
+                margin-bottom: 40px
+                @include media(540)
+                    margin-bottom: 20px
+                .col
+                    --plus: 14px
+                    --border: 2px
+                    border-bottom: 1px solid #D1D1D1
+                    &.active
+                        .title
+                            border-bottom: 1px solid #D1D1D1
+                            p
+                                color: var(--colortext)
+                            .ico
+                                &::after
+                                    background: var(--colortext)
+                                    transform: rotate(90deg)
+                    .title
+                        cursor: pointer
+                        @include flex
+                        align-items: center
+                        padding: 14px 0
+                        .ico
+                            flex: 0 1 auto
+                            height: var(--plus)
+                            width: var(--plus)
+                            position: relative
+                            &::before,&::after
+                                content: ''
+                                position: absolute
+                                background: $black
+                                transition: .5s ease
+                            &::before
+                                top: 50%
+                                left: 0
+                                right: 0
+                                translate: 0 -50%
+                                height: var(--border)
+                            &::after
+                                left: 50%
+                                translate: -50% 0
+                                top: 0
+                                bottom: 0
+                                width: var(--border)
+                            svg
+                                width: 36px
+                                height: 36px
+                        p
+                            flex: 1
+                            font-size: 16px
+                            line-height: 1.2
+                            letter-spacing: 4px
+                            text-transform: uppercase
+                            font-family: $LeJ
+                            font-weight: 500
+                            color: $text
+                    article 
+                        .content-article
+                            padding: 15px 0 20px
+                            .product-description
+                                *
+                                    color: $text
+                                p,ul
+                                    margin-bottom: 22px
+                                    font-size: 18px
+                                h3,h2,h4,h5,h6
+                                    margin-bottom: 13px
+                                    font-size: 20px
+                                    line-height: 1.2
+                                ul
+                                    padding-left: 20px
+                                    li
+                                        list-style: disc
+                                        &::marker
+                                            color: #D9D9D9
+            .col-itqeq
+                display: flex
+                .rgcwv
+                    flex: 1
+                    padding: 10px 43px
+                    text-align: center
+                    &:not(:last-child)
+                        border-right: 1px solid #CFCFCF
+                    @include media(540)
+                        padding: 0 8px
+                    .ico
+                        line-height: 0
+                        margin-bottom: 15px
+                    p
+                        font-size: 13px
+                        line-height: 15px
+                        text-transform: uppercase
+                        color: $text
+
+.product-detail-secA
+    .sec-heading
+        h3
+            color: $black
+    .slider-nav
+        button
+            svg
+                path 
+                    fill: #000
+    // .more-products-slider
+    //     .product-col
+    //         img
+    //             aspect-ratio: 1
+
+.custom-pop
+    right: 0
+    transform: translateX(100%)
+    transition: .5s ease
+    background: $white
+    &.is-open
+        transform: translateX(0%)
+    .model-body
+        padding: 60px 35px 30px
+        height: 100%
+        overflow-y: auto
+        @include scrollbar(3px,$white,#5e5e5e,8px)
+        @include media(675)
+            padding: 70px 20px 30px
+        .title
+            text-align: center
+            margin-bottom: 2rem
+            h4
+                font-size: 32px
+                color: $black
+                @include font(500)
+            p
+                color: $text
+                margin-top: 10px
+                font-size: 14px
+                line-height: 20px
+                max-width: 317px
+                margin-left: auto
+                margin-right: auto
+                @include media(675)
+                    font-size: 14px
+                    max-width: 300px
+        .form
+            --gaptb: 15px
+
+.custom-pop
+    right: 0
+    max-width: 600px
+    transform: translateX(100%)
+    transition: .5s ease
+    background: $white
+    &.is-open
+        transform: translateX(0%)
+    .model-body
+        padding: 60px 35px 30px
+        height: 100%
+        overflow-y: auto
+        @include scrollbar(3px,$white,#5e5e5e,8px)
+        @include media(675)
+            padding: 70px 20px 30px
+        .title
+            text-align: center
+            margin-bottom: 2rem
+            h4
+                font-size: 32px
+                color: $black
+                @include font(500)
+            p
+                color: $text
+                margin-top: 10px
+                font-size: 14px
+                line-height: 20px
+                max-width: 317px
+                margin-left: auto
+                margin-right: auto
+                @include media(675)
+                    font-size: 14px
+                    max-width: 300px
+        .form
+            --gaptb: 15px
+            --item: 2
+            .front_img
+                background-color: #6666660f
+                padding: 0 10px
+                &::before, &::after
+                    display: none
+                .file-name
+                    --filename: "Front Image"
+            .back_img
+                background-color: #6666660f
+                padding: 0 10px
+                &::before, &::after
+                    display: none
+                .file-name
+                    --filename: "Back Image"
+            .rightside_img
+                background-color: #6666660f
+                padding: 0 10px
+                &::before, &::after
+                    display: none
+                .file-name
+                    --filename: "Right Side Image"
+            .leftside_img
+                background-color: #6666660f
+                padding: 0 10px
+                &::before, &::after
+                    display: none
+                .file-name
+                    --filename: "Left Side Image"

@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.contact-banner {
+  padding: 95px 0 70px;
+}
+@media only screen and (max-width: 991px) {
+  .contact-banner {
+    padding: 80px 0 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-banner {
+    padding: 60px 0 50px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-banner {
+    padding: 50px 0 40px;
+  }
+}
+.contact-banner .content h1 {
+  color: #000;
+  letter-spacing: 4px;
+}
+
+.contact-secA {
+  padding-bottom: 67px;
+}
+@media only screen and (max-width: 991px) {
+  .contact-secA {
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-secA {
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secA {
+    padding-bottom: 0;
+  }
+}
+.contact-secA .flex {
+  gap: 24px;
+}
+@media only screen and (max-width: 768px) {
+  .contact-secA .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.contact-secA .col-md {
+  flex: 1;
+  padding: 44px 32px 55px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-secA .col-md .inf {
+  flex: 1;
+  padding-left: 30px;
+}
+.contact-secA .col-md .inf h6 {
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--primary);
+  margin-bottom: 9px;
+}
+.contact-secA .col-md .inf a {
+  display: block;
+  color: var(--text);
+}
+.contact-secA .col-md .inf a:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+.contact-secA .col-md .inf a:hover {
+  color: var(--primary);
+}
+
+.contact-secC {
+  padding: 67px 0 170px;
+}
+@media only screen and (max-width: 991px) {
+  .contact-secC {
+    padding: 55px 0 130px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-secC {
+    padding: 40px 0 100px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secC {
+    padding: 50px 0;
+  }
+}
+.contact-secC .heading {
+  max-width: 415px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 54px;
+}
+.contact-secC .heading h3 {
+  color: var(--black);
+  letter-spacing: 5px;
+}
+.contact-secC .heading .ico {
+  width: 70px;
+  line-height: 0;
+  margin-bottom: 38px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-secC .heading .ico svg path {
+  fill: #000;
+}
+.contact-secC .form-wrap {
+  max-width: 622px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-secC .form-wrap .form {
+  --item: 2;
+  --borderbefore: var(--text);
+  --borderafter: var(--black);
+  --gaptb: 17px;
+  --gaplr: 17px;
+}
+.contact-secC .form-wrap .form .sbmt-grp {
+  margin-top: 35px;
+}
+.contact-secC .form-wrap .form .sbmt-grp .btn {
+  --padding: 50px;
+}/*# sourceMappingURL=contact.css.map */

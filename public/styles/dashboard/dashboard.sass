@@ -1,0 +1,513 @@
+@import '../_var'
+
+.dashboard-secA
+    padding: 45px 0 55px
+    .flex
+        @include media(540)
+            flex-direction: column
+        .aside-left,.aside-right
+            position: sticky
+            top: calc(var(--headerfixed) + 10px)
+            height: 100%
+            @include media(540)
+                position: static
+        .aside-left
+            flex: 0 1 30%
+            max-width: 30%
+            width: 100%
+            background: #F1F1F1
+            border-radius: 5px
+            @include after
+            &::after
+                background: url(../../images/vector/vector-1-small.svg) no-repeat
+                background-size: 100% auto
+                background-position: 0 100%
+                z-index: 0
+                opacity: .18
+            @include media(540)
+                flex: 1
+                max-width: 100%
+            .aside-left-wrap
+                position: relative
+                z-index: 1
+            .profile-col
+                padding: 30px 25px 40px
+                border-bottom: 1px solid #E1E1E1
+                --ico: 78px
+                text-align: center
+                @include media(768)
+                    padding: 20px 15px 30px
+                .ico
+                    height: var(--ico)
+                    width: var(--ico)
+                    border-radius: 50%
+                    overflow: hidden
+                    line-height: 0
+                    display: inline-block
+                    img
+                        height: 100%
+                        width: 100%
+                        object-fit: cover
+                .wlcm
+                    font-size: 20px
+                    line-height: 1.2
+                    color: $black
+                    margin: 14px 0 4px
+                .name-usr
+                    font-size: 16px
+                    line-height: 18px
+                    color: $text
+            .nav-col
+                padding: 40px 30px 12rem
+                display: flex
+                justify-content: center
+                background-position: 0 100%
+                background-size: 100% auto
+                @include media(768)
+                    padding: 20px 15px 2rem
+                ul
+                    li
+                        &:not(:last-child)
+                            margin-bottom: 18px
+                        a
+                            color: $text
+                            &:hover
+                                color: $primary
+                            &.active
+                                color: $primary
+        .aside-right
+            flex: 1
+            margin-left: 50px
+            @include media(768)
+                margin-left: 30px
+            @include media(540)
+                margin-left: 0
+                margin-top: 40px
+            .aside-right-wrap
+                .form-title
+                    margin-bottom: 47px
+                    font-family: $LeJ
+                    color: $black
+                    font-size: 20px
+                    line-height: 22px
+                    letter-spacing: 0.15em
+                    text-transform: uppercase
+                    @include media(768)
+                        margin-bottom: 30px
+                    @include media(540)
+                        text-align: center
+                        margin-bottom: 40px
+                .form-grid
+                    --item: 2
+                    --gaplr: 53px
+                    --gaptb: 34px
+                    @include media(768)
+                        --gaplr: 20px
+                    .submit-grp
+                        @include media(540)
+                            text-align: center
+                        .btn
+                            --padding: 54px
+            .dznjn-wrap
+                .dznjn
+                    .bkd-htl-crd
+                        border: 1px solid #F1F1F1
+                        border-radius: 5px
+                        overflow: hidden
+                        &:not(:last-child)
+                            margin-bottom: 8px
+                        &.active
+                            .title
+                                .arr-htt
+                                    transform: rotate(-90deg)
+                        .title
+                            padding: 8px 16px
+                            background: #F1F1F1
+                            @include flex
+                            align-items: center
+                            transition: .5s ease
+                            cursor: pointer
+                            gap: 2rem
+                            @include media(540)
+                                gap: 1rem
+                            .asd-ttl
+                                flex: 1
+                                .rm-id
+                                    font-size: 16px
+                                    line-height: 1.5
+                                    transition: inherit
+                                    color: $black
+                                .rm-dt
+                                    font-size: 14px
+                                    line-height: 18px
+                                    transition: inherit
+                                    color: $text
+                            .arr-htt
+                                width: 15px
+                                height: 15px
+                                background-image: url(../../icon/arrow-down-gray.svg)
+                                background-repeat: no-repeat
+                                background-size: 100% auto
+                                background-position: 0 50%
+                                transition: .5s ease
+                        article
+                            .icodf
+                                padding: 24px 15px 0px
+                                border-bottom: 1px solid #e9e9e9
+                                >*
+                                    margin-bottom: 20px
+                                    *
+                                        &:not(.btn)
+                                            color: $text
+                                            font-size: 14px
+                                            line-height: 17.22px 
+                                            span
+                                                color: $black
+                                .vkbcd, .jnkvz
+                                    color: $text
+                                .bcxcb
+                                    color: $text 
+                                    span
+                                        color: $black
+                            .mid-sec-card
+                                @include flex
+                                padding: 24px 15px
+                                border-bottom: 1px solid #e9e9e9
+                                @include media(540)
+                                    flex-direction: column
+                                    gap: 30px
+                                figure
+                                    flex: 0 1 107px
+                                    line-height: 0
+                                    overflow: hidden
+                                    @include media(540)
+                                        flex: 1
+                                    img
+                                        width: 100%
+                                        object-fit: cover
+                                        @include media(540)
+                                            height: 100%
+                                figcaption
+                                    flex: 1
+                                    padding-left: 34px
+                                    position: relative
+                                    @include media(540)
+                                        padding: 0 10px
+                                    .lmxa,.ialv
+                                        font-size: 14px
+                                        line-height: 18px
+                                        color: $text
+                                    .lmxa
+                                        margin-bottom: 14px
+                                        max-width: 407px
+                                        font-size: 18px
+                                        color: $black
+                                    .ialv
+                                        margin-bottom: 18px
+                                        font-size: 16px
+                                    .xzoui
+                                        color: $black
+                                        font-size: 16px
+                                        line-height: 18px
+                                        margin-bottom: 25px
+                                    .kgmia-ordt-wrap
+                                        position: absolute
+                                        right: 20px
+                                        bottom: 20px
+                                        display: flex
+                                        align-items: center
+                                        gap: 10px
+                                    .xtfzj
+                                        position: absolute
+                                        bottom: 0
+                                        right: 0
+                                        z-index: 3
+                            .etydk
+                                @include flex
+                                padding: 12px 15px
+                                border-top: 1px solid #DADADA
+                                justify-content: space-between
+                                .lezce,.kpqhg
+                                    display: flex
+                                    align-items: center
+                                    gap: 53px
+                                    font-size: 14px
+                                    p
+                                        font-size: 16px
+                                .ignqi
+                                    @include font(600)
+                                    color: $black
+                                    font-size: 16px
+                            .nsvq0-wrap
+                                max-width: 740px
+                                margin: 1rem auto 3rem
+                                ul
+                                    display: flex
+                                    gap: 68px
+                                    --color: #c6c6c6
+                                    --dot: 13px
+                                    --line: 164px
+                                    position: relative
+                                    @include media(540)
+                                        display: none
+                                    li
+                                        flex: 1
+                                        text-align: center
+                                        line-height: normal
+                                        position: relative
+                                        &:last-child
+                                            .dot 
+                                                &::before, &::after
+                                                    display: none
+                                        &.active
+                                            &:has(+ li.active)
+                                                .dot
+                                                    &::after
+                                                        width: var(--line)
+                                            > *
+                                                color: var(--sucgreen)
+                                            .dot
+                                                background-color: var(--sucgreen)
+                                                &::after
+                                                    opacity: 1
+                                        >* 
+                                            font-size: 14px
+                                            line-height: 18px
+                                            color: #c6c6c6
+                                        .dot
+                                            height: var(--dot)
+                                            width: var(--dot)
+                                            margin: 14px auto
+                                            background: #c6c6c6
+                                            border-radius: 50%
+                                            position: relative
+                                            &::before, &::after
+                                                content: ""
+                                                position: absolute
+                                                left: 100%
+                                                top: 50%
+                                                translate: 0 -50%
+                                                height: 1px
+                                            &::before
+                                                width: var(--line)
+                                                background: #c6c6c6
+                                            &::after
+                                                width: calc(var(--line) * 0.5)
+                                                background: var(--green)
+                                                opacity: 0
+            .dypye-wrap
+                .veqrn
+                    margin-bottom: 20px
+                    color: $primary
+                    &:hover
+                        color: $black
+                        path
+                            fill: $black
+                .dypye
+                    .ratpk
+                        border: 1px solid #F1F1F1
+                        border-radius: 5px
+                        overflow: hidden
+                        .title
+                            padding: 8px 16px
+                            background: #F1F1F1
+                            @include flex
+                            align-items: center
+                            transition: .5s ease
+                            cursor: pointer
+                            .asd-ttl
+                                flex: 1
+                                .rm-id
+                                    font-size: 16px
+                                    line-height: 1.5
+                                    transition: inherit
+                                .rm-dt
+                                    font-size: 14px
+                                    line-height: 18px
+                                    transition: inherit
+                        article
+                            .achfv-card-desc
+                                padding: 24px 15px
+                                border-bottom: 1px solid #F3F3F3
+                                position: relative
+                                .xqzlx
+                                    position: absolute
+                                    top: 30px
+                                    right: 30px
+                                    z-index: 3
+                                .ttl-kauwh
+                                    margin-bottom: 12px
+                                    -webkit-text-stroke: .2px
+                                .icodf
+                                    > *
+                                        margin-bottom: 20px
+                                    *
+                                        &:not(.btn)
+                                            color: $text
+                                            font-size: 14px
+                                            line-height: 17.22px
+                                            span
+                                                color: $black
+                            .mid-eelqz-card
+                                @include flex
+                                padding: 24px 15px
+                                figure
+                                    flex: 0 1 107px
+                                    line-height: 0
+                                    overflow: hidden
+                                    img
+                                        width: 100%
+                                        object-fit: cover
+                                figcaption
+                                    flex: 1
+                                    padding-left: 34px
+                                    position: relative
+                                    .lmxa,.ialv
+                                        font-size: 14px
+                                        line-height: 18px
+                                        color: $text
+                                    .lmxa
+                                        margin-bottom: 18px
+                                        max-width: 407px
+                                    .ialv
+                                        margin-bottom: 24px
+                                    .nsvq0-wrap
+                                        ul
+                                            display: flex
+                                            gap: 68px
+                                            --color: #c6c6c6
+                                            --dot: 13px
+                                            --line: 175px
+                                            position: relative
+                                            li
+                                                flex: 1
+                                                text-align: center
+                                                line-height: normal
+                                                position: relative
+                                                &::before
+                                                    content: ''
+                                                    position: absolute
+                                                    right: calc(100% - 55px)
+                                                    top: 50%
+                                                    translate: 0 -50%
+                                                    height: 1px
+                                                    width: var(--line)
+                                                    background: var(--green)
+                                                    display: none
+                                                &:first-child,&:last-child
+                                                    &.active
+                                                        > *
+                                                            color: var(--green)
+                                                        .dot
+                                                            background: var(--green)
+                                                &:not(:first-child,:last-child)
+                                                    &.active
+                                                        > *
+                                                            color: var(--green)
+                                                        &::before
+                                                            display: block
+                                                        .dot
+                                                            background: var(--green)
+                                                            &::after
+                                                                opacity: 1
+                                                &:last-child
+                                                    &.active
+                                                        .dot
+                                                            &::after
+                                                                opacity: 1
+                                                                right: 100%
+                                                                left: auto
+                                                > *
+                                                    font-size: 14px
+                                                    line-height: 18px
+                                                    color: #c6c6c6
+                                                .dot
+                                                    height: var(--dot)
+                                                    width: var(--dot)
+                                                    margin: 14px auto
+                                                    background: #c6c6c6
+                                                    border-radius: 50%
+                                                    position: relative
+                                                    &::before,&::after
+                                                        content: ''
+                                                        position: absolute
+                                                        left: 100%
+                                                        top: 50%
+                                                        translate: 0 -50%
+                                                        height: 1px
+                                                    &::before
+                                                        width: var(--line)
+                                                        background: #c6c6c6
+                                                    &::after
+                                                        width: calc(var(--line) * 0.5)
+                                                        background: var(--green)
+                                                        z-index: 1
+                                                        opacity: 0
+                                                &:last-child
+                                                    .dot
+                                                        &::before
+                                                            display: none
+                            .uvjai
+                                @include flex
+                                padding: 12px 15px
+                                border-top: 1px solid #DADADA
+                                justify-content: space-between
+                                .lezce,.kpqhg
+                                    display: flex
+                                    align-items: center
+                                    gap: 53px
+                                    font-size: 14px
+                                .ignqi
+                                    @include font(600)
+                                    color: $black
+                                    font-size: 16px
+            .wish-list-wrap-dashboard
+                display: grid
+                grid-template-columns: repeat(3,1fr)
+                grid-gap: 90px 20px
+                @include media(991)
+                    grid-gap: 90px 10px
+                @include media(768)
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-gap: 60px 10px
+                @include media(540)
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                .product-not-found
+                    @include media(768)
+                        position: relative
+                .rkuj-col
+                    position: relative
+                    a
+                        &:has(img)
+                            line-height: 0
+                        img
+                            width: 100%
+                            object-fit: contain
+                    figcaption
+                        padding-top: 18px
+                        text-align: center
+                        .prdt-nm
+                            color: $text
+                    .wishlist-ico
+                        --ico: 35px
+                        height: var(--ico)
+                        width: var(--ico)
+                        background: var(--white)
+                        border-radius: 50%
+                        position: absolute
+                        top: 11px
+                        right: 10px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        @include media(991)
+                            --ico: 30px
+                        img
+                            width: 30%
+                    .btn-div
+                        margin-top: 1rem
+
+                .mv-top-bg-wrap
+                    margin-top: 37px

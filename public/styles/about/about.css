@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.banner.about-banner .bg {
+  height: 100vh;
+}
+@media only screen and (max-width: 768px) {
+  .banner.about-banner .bg {
+    height: 80vh;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .banner.about-banner .bg {
+    height: 50vh;
+  }
+}
+.banner.about-banner .bg .banner-wrapper {
+  left: 50%;
+  top: unset;
+  bottom: 0%;
+  transform: translate(-50%, 0%);
+}
+@media only screen and (max-width: 768px) {
+  .banner.about-banner .bg .banner-wrapper {
+    width: 100%;
+  }
+}
+.banner.about-banner .bg .banner-wrapper .container .heading {
+  text-align: center;
+}
+.banner.about-banner .bg .banner-wrapper .container .heading svg {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .banner.about-banner .bg .banner-wrapper .container .heading svg {
+    display: none;
+  }
+}
+.banner.about-banner .bg .banner-wrapper .container .heading h3 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  padding-bottom: 30px;
+}
+
+.about-secA {
+  padding: 9.5rem 0 10.5rem;
+}
+@media only screen and (max-width: 991px) {
+  .about-secA {
+    padding: 8.5rem 0 9.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-secA {
+    padding: 5rem 0 7rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA {
+    padding: 2rem 0;
+  }
+}
+.about-secA .heading {
+  margin-bottom: 32px;
+}
+.about-secA .heading h3 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #000;
+  font-size: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .about-secA .heading h3 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA .heading h3 {
+    font-size: 24px;
+  }
+}
+.about-secA .content {
+  max-width: 915px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text);
+  font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .about-secA .content {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA .content {
+    font-size: 16px;
+  }
+}
+.about-secA .content h3 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #000;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .about-secA .content h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA .content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+.about-secB {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+  .about-secB {
+    flex-direction: column;
+  }
+}
+.about-secB figure {
+  flex: 0 1 52%;
+  max-width: 52%;
+  width: 10%;
+  position: relative;
+  line-height: 0;
+}
+@media only screen and (max-width: 768px) {
+  .about-secB figure {
+    flex: 0 1 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.about-secB figure > img {
+  width: 100%;
+}
+.about-secB figure .ico {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  line-height: 0;
+}
+@media only screen and (max-width: 768px) {
+  .about-secB figure .ico {
+    display: none;
+  }
+}
+.about-secB figcaption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .about-secB figcaption {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secB figcaption {
+    padding: 30px 0;
+  }
+}
+.about-secB figcaption .content {
+  max-width: 585px;
+  padding: 0 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .about-secB figcaption .content {
+    padding: 0 25px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secB figcaption .content {
+    padding: 0 15px;
+  }
+}
+.about-secB figcaption .content .heading {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.about-secB figcaption .content .heading h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #000;
+}
+@media only screen and (max-width: 768px) {
+  .about-secB figcaption .content .heading h2 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secB figcaption .content .heading h2 {
+    font-size: 24px;
+  }
+}
+.about-secB figcaption .content .desc {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.about-secA.about-secC {
+  padding: 70px 0;
+}
+@media only screen and (max-width: 991pxpx) {
+  .about-secA.about-secC {
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 768pxpx) {
+  .about-secA.about-secC {
+    padding: 50px 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA.about-secC {
+    padding: 40px 0;
+  }
+}
+.about-secA.about-secC .content {
+  max-width: 750px;
+}
+
+.about-secB.video-sec figure video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-secB.video-sec figcaption {
+  padding: 7rem 0;
+}
+@media only screen and (max-width: 991pxpx) {
+  .about-secB.video-sec figcaption {
+    padding: 6rem 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about-secB.video-sec figcaption {
+    padding: 5rem 0;
+  }
+}
+@media only screen and (max-width: 540pxpx) {
+  .about-secB.video-sec figcaption {
+    padding: 3rem 0;
+  }
+}
+
+.secsrch-cjrvs-sec .upper-sec .heading h3 {
+  font-size: 30px;
+  color: #000;
+}
+@media only screen and (max-width: 768px) {
+  .secsrch-cjrvs-sec .upper-sec .heading h3 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .secsrch-cjrvs-sec .upper-sec .heading h3 {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=about.css.map */

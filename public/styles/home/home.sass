@@ -1,0 +1,203 @@
+@import '../_var'
+
+.hero_sec
+    position: relative
+    .scrollbar_wrapper
+        width: 100%
+        display: flex
+        align-items: center
+        gap: 20px
+        position: absolute
+        left: 13%
+        bottom: 5%
+        transform: translate(-10%, 5%)
+        z-index: 3
+        --swiper-pagination-color: #fff
+        .play_btn
+            --btnsize: 16px
+            display: inline-block
+            vertical-align: middle
+            --btncolor: #fff
+            background: transparent
+            width: 0
+            height: var(--btnsize)
+            border-color: transparent transparent transparent var(--btncolor)
+            transition: 100ms all ease
+            cursor: pointer
+            border-style: solid
+            border-width: calc(var(--btnsize) * 0.5) 0 calc(var(--btnsize) * 0.5) calc(var(--btnsize) * 0.81)
+            &.pause
+                border-style: double
+                border-width: 0px 0 0px calc(var(--btnsize) * 0.81)
+        // .play_btn
+        //     flex: 0 1 auto
+        //     width: 45px
+        //     height: 45px
+        //     border: 1px solid $white
+        //     border-radius: 50%
+        //     display: flex
+        //     align-items: center
+        //     justify-content: center
+            svg
+                vertical-align: middle
+                width: 20px
+                height: 20px
+        .progress_bar
+            position: relative
+            flex: 1
+    .soundbar
+        position: absolute
+        right: 3%
+        bottom: 15%
+        z-index: 1
+        transform: translate(3%, 15%)
+        cursor: pointer
+    .home-nav
+        max-width: 85%
+        .swiper-prev, .swiper-next
+            width: 40px
+            height: 40px
+            background: $white
+            border-radius: 50%
+            svg 
+                vertical-align: middle
+.banner
+    &.home-banner
+        &::before
+            background: linear-gradient(359deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.6) 88%)
+        .bg 
+            height: 100vh
+            @include media(540)
+                height: 80vh
+            .banner-wrapper
+                left: 50%
+                top: unset
+                bottom: 10%
+                transform: translate(-50%, 10%)
+                @include media(768)
+                    width: 400px
+                @include media(540)
+                    width: 300px
+                .heading
+                    text-align: center
+                    h1
+                        font-size: 48px
+                    p
+                        text-transform: uppercase
+                        letter-spacing: 2px
+                        font-weight: 300
+                    .btn
+                        margin-top: 40px
+                            
+.client_slider_wrapper
+    .heading
+        margin-bottom: 4rem
+    .client_slider
+        .swiper-wrapper
+            transition-timing-function: linear !important
+        .swiper-slide
+            figure
+                width: 100%
+                height: 100%
+                &:hover
+                    img
+                        filter: grayscale(0)
+                img
+                    object-fit: contain
+                    filter: grayscale(1)
+                    transition: .5s ease
+
+.home-secA
+    .heading
+        margin-bottom: 3rem
+    .profession_grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 6px 8px
+        .profession_col
+            &::before
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.6) 88%)
+            figcaption
+                text-align: center
+                padding: 0 10px 20px
+                bottom: 10%
+                translate: 0 10%
+                h6, p 
+                    color: $white
+                    transition: 0.6s ease
+                h6
+                    font-size: 24px
+                p
+                    font-size: 14px
+    .btn_wrapper
+        margin-top: 50px
+        text-align: center
+
+.promo-sec
+    .bg
+        height: 80vh
+    .banner-wrapper
+        top: unset
+        bottom: 15%
+        translate: 0 15%
+        h2
+            font-size: 50px
+            color: $white
+            line-height: 1.2
+            padding-bottom: 10px
+        p
+            color: $white
+            padding-bottom: 50px
+
+.counter-sec
+    .banner-wrapper
+        color: $white
+        line-height: 1.2
+        h2
+            font-size: 36px
+        .subhead
+            padding: 20px 0 30px
+            max-width: 540px
+            font-weight: 300
+            line-height: 1.5
+        .counter-wrapper
+            display: flex
+            align-items: center
+            gap: 30px
+            margin-bottom: 30px
+            .counter-info-wrap
+                h5
+                    font-family: $Lato
+                p
+                    font-weight: 300
+
+.home-secB
+    position: relative
+    .heading
+        max-width: 470px
+        margin: 0 auto
+    .video
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        z-index: -1
+        opacity: .4
+        video
+            width: 100%
+            height: 100%
+            object-fit: contain
+    .flags_wrapper
+        grid-template-columns: repeat(6, 1fr)
+        max-width: 900px
+        margin: 60px auto 
+        figure
+            display: flex
+            align-items: center
+            gap: 10px
+            img
+                width: 35px
+            p
+                font-weight: 400
+                letter-spacing: 2px
+                text-transform: uppercase

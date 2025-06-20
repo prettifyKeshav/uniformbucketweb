@@ -1,0 +1,488 @@
+@import '../_var'
+
+.checkout-header
+    padding: 20px 0
+    border-bottom: 1px solid #F1F1F1
+    .checkout-header-wrapper
+        display: flex
+        align-items: center
+        @include media(540) 
+            justify-content: space-between
+        .colB
+            flex: 1
+            padding: 0 3rem
+            @include media(540) 
+                display: none
+            ul
+                text-align: center
+                max-width: 514px
+                margin-left: auto
+                margin-right: auto
+                li
+                    display: inline-block
+                    vertical-align: middle
+                    background: $white
+                    position: relative
+                    &:not(:last-child)
+                        margin-right: 5rem
+                        @include media(768)
+                            margin-right: 2rem 
+                        &::before
+                            content: ''
+                            position: absolute
+                            left: calc( 100% + 20px )
+                            bottom: 15%
+                            height: 1px
+                            width: 45px
+                            border: 1px dashed #ccc
+                            @include media(768)
+                                left: calc(100% + 8px)
+                                width: 21px    
+                    a
+                        display: block
+                        text-align: center
+                        font-size: 14px
+                        line-height: 17.22px
+                        letter-spacing: 0.15em
+                        text-align: center
+                        color: $text
+                        text-transform: uppercase
+                        background: $white
+                        @include media(768)
+                            font-size: 12px 
+                        .ico
+                            height: 28px
+                            width: 28px
+                            margin: 0 auto 16px
+                            border-radius: 50%
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            background: #ECECEC
+                            @include media(768) 
+                                width: 20px
+                                height: 20px
+                                margin: 0 auto 10px
+                        &.active
+                            color: $primary
+                            .ico
+                                background: $primary
+        .colC
+            .secure-kaedj
+                color: $text
+                font-size: 14px
+                line-height: 17.22px
+                letter-spacing: 0.15em
+
+
+.check-out-main
+    --container: 964px
+    .check-out-secA-zbyqo
+        .flex-checkout-cwgln
+            padding: 58px 0 42px 
+            display: flex
+            @include media(768)
+                padding: 40px 0 30px
+                flex-direction: column
+            @include media(540) 
+                padding: 25px 0 30px
+            .colA-flex-hfmcf,.colB-flex-hfmcf
+                position: sticky
+                top: 20px
+                height: 100%
+                @include media(768)
+                    position: static
+            .colA-flex-hfmcf
+                flex: 0 1 65%
+                max-width: 65%
+                width: 100%
+                @include media(768)
+                    flex: 0 1 100%
+                    max-width: 100%
+                .rysiv
+                    padding-top: 20px
+            .colB-flex-hfmcf
+                flex: 1
+                margin-left: 26px
+                padding-left: 26px
+                border-left: 1px solid #F3F3F3
+                @include media(768)
+                    margin-left: 0
+                    padding: 25px
+                    margin-top: 40px
+                @include media(540) 
+                    margin-top: 20px
+        .btm-check-out-cwgln
+            padding: 88px 0 110px
+            @include media(768)
+                padding: 50px 0 60px
+            @include media(540) 
+                padding: 20px 0 40px
+            .flex-btn-fwer
+                display: flex
+                align-items: flex-end
+                @include media(540) 
+                    flex-direction: column
+                .bank-list
+                    flex: 1
+                    li
+                        display: inline-block
+                        vertical-align: middle
+                        line-height: 0
+                .nd-hlp
+                    color: $text
+                    a
+                        color: $text
+                        &:hover
+                            text-decoration: underline
+        .bag-dobyk
+            .upper-sshjm
+                display: flex
+                align-items: center
+                margin-bottom: 36px
+                @include media(768) 
+                    margin-bottom: 20px
+                .btn-xyxgw
+                    flex: 1
+                    text-align: right
+                    .uayri
+                        color: $text
+                        &:is(a,button)
+                            &:hover
+                                color: $primary
+                        &:not(:last-child)
+                            border-right: 1px solid #D1D1D1
+                            margin-right: 30px
+                            padding-right: 30px
+            .bag-product-wrsvn-wrap
+                .bag-product-wrsvn
+                    padding: 16px
+                    border: 1px solid #F1F1F1
+                    border-radius: 5px
+                    display: flex
+                    position: relative
+                    &:not(:last-child)
+                        margin-bottom: 22px
+                    @include media(540) 
+                        flex-direction: column
+                        align-items: center
+                        gap: 20px
+                    .remove-wrsvn
+                        top: 15px
+                        right: 16px
+                        z-index: 3
+                        line-height: 0
+                        @include media(540) 
+                            position: absolute
+                    figure
+                        line-height: 0
+                        position: relative
+                        a
+                            display: block
+                            line-height: 0
+                        img
+                            width: 107px
+                        input
+                            @include checkbox(true,$white)
+                            position: absolute
+                            top: 8px
+                            left: 6px
+                            z-index: 3
+                    figcaption
+                        flex: 1
+                        padding-left: 34px
+                        @include media(540) 
+                            padding-left: 0
+                        .title-tznlw,.fnznl
+                            font-size: 14px
+                            line-height: 18px
+                            color: $text
+                            max-width: 407px
+                            margin-bottom: 18px
+                        .prdct-vzmmh
+                            margin-bottom: 25px
+                            display: flex
+                            gap: 2rem
+                            .size-eoimy
+                                width: fit-content
+                                background: #F1F1F1
+                                border-radius: 5px
+                                display: flex
+                                gap: 5px
+                                padding: 8px 10px
+                                --labelfontbefore: 14px
+                                font-size: var(--labelfontbefore)
+                                .prdct-size-glcjj
+                                    flex: 1
+                                    --arrow: 10px
+                                    .list
+                                        left: auto
+                                        li
+                                            padding: 6px 15px
+                            .val-wrap
+                                display: flex
+                                align-items: center
+                                .count-val
+                                    font-size: 16px
+                                    width: 50px
+                                    border: 0
+                                    background: none
+                                    text-align: center
+                                    color: $text
+                                    @include media(1200)
+                                        font-size: 20px
+                                    &:focus
+                                        outline: none
+                                .minus-val,.plus-val
+                                    width: 30px
+                                    height: 30px
+                                    border: 1px solid $text
+                                    background: none
+                                    border-radius: 5px
+                                    text-align: center
+                                    font-size: 22px
+                                    line-height: 22px
+                                    cursor: pointer
+                                    color: $text
+                                    @include media(1200)
+                                        height: 35px
+                                        width: 35px
+                                        font-size: 20px
+                                    &.disabled
+                                        opacity: .4
+                                        cursor: no-drop
+                        .price-btm-zpsgj
+                            li
+                                display: inline-block
+                                vertical-align: middle
+                                &:not(:last-child)
+                                    margin-right: 15px
+                            .price-zpsgj
+                                font-family: $Lato
+                                font-size: 14px
+                                line-height: 18px
+                                span
+                                    font-family: $LeJ
+                                    font-size: 14px
+                                    line-height: 1
+                                    display: inline-block
+                            .price-pefca
+                                font-family: $Lato
+                                font-size: 14px
+                                line-height: 1
+                                color: $text
+                                text-decoration: line-through
+                                span
+                                    display: inline-block
+                                    text-decoration: line-through
+                                    font-family: $LeJ
+                            .discount-zpsgj
+                                font-family: $Lato
+                                font-size: 14px
+                                line-height: 1
+                                color: $primary
+                                font-weight: bold
+        .coupon-nvixw
+            padding-bottom: 60px
+            position: relative
+            .tlt-vcfrm
+                font-size: 16px
+                line-height: 24px
+                color: $black
+                margin-bottom: 14px
+            .cupn-hjgn
+                display: flex
+                gap: 12px
+                input
+                    flex: 1
+                    border: none
+                    border-bottom: 1px solid $text
+                    &:focus
+                        outline: none
+            .invalid-coupn
+                color: red
+                position: absolute
+                left: 0
+                right: 0
+                bottom: 30px
+                font-size: 14px
+        .prd-dtl-adr-wrap
+            border-bottom: 1px solid #D3D3D3
+            padding-bottom: 40px
+            margin-bottom: 28px
+            .prd-dtl-adr
+                display: flex
+                position: relative
+                &:not(:last-child)
+                    margin-bottom: 27px
+                figure
+                    line-height: 0
+                    position: relative
+                    a
+                        display: block
+                        line-height: 0
+                    img
+                        width: 64px
+                figcaption
+                    flex: 1
+                    padding-left: 21px
+                    .title-mfyg
+                        font-size: 14px
+                        line-height: 18px
+                        color: $text
+                        margin-bottom: 18px
+                    .price-btm-cyrq
+                        li
+                            display: inline-block
+                            vertical-align: middle
+                            &:not(:last-child)
+                                margin-right: 8px
+                            &.price-pefca
+                                color: $text
+                                text-decoration: line-through
+                        .price-cyrq
+                            font-family: $Lato
+                            font-size: 14px
+                            line-height: 18px
+                            span
+                                font-family: $LeJ
+                                font-size: 14px
+                                line-height: 1
+                                display: inline-block
+                        .price-jpzi
+                            font-family: $Lato
+                            font-size: 14px
+                            line-height: 1
+                            color: $text
+                            text-decoration: line-through
+                            span
+                                display: inline-block
+                                text-decoration: line-through
+                                font-family: $LeJ
+                        .discount-cyrq
+                            font-family: $Lato
+                            font-size: 14px
+                            line-height: 1
+                            color: $primary
+                            font-weight: bold
+        .ttl-tkywa
+            font-size: 20px
+            line-height: 24px
+            color: $black
+        .irmhhz
+            .kmmdc
+                margin-bottom: 26px
+        .dvhws
+            .txsmx
+                margin-bottom: 32px
+            .nggtj-wrap
+                max-width: 460px
+                display: flex
+                gap: 26px
+                .chckbx-nggtj
+                    flex: 1
+                    background: #F3F3F3
+                    padding: 28px 20px
+                    border-radius: 5px
+                    p
+                        @include media(540) 
+                            flex: 1
+        .addr-hved-chc
+            .no-addr-form-wrap
+                .form
+                    --item: 2
+                    --gaptb: 25px
+                    --borderbefore: var(--text)
+                    .btn-grp
+                        margin-top: 2rem
+                        .btn
+                            --padding: 64px
+                    .billing-adddr-btn-wrap
+                        display: flex
+                        gap: 20px
+                        justify-content: space-between
+                    .billing-adddr-btn
+                        color: $primary
+                        display: inline-flex
+                        align-items: center
+                        gap: 10px
+                        path
+                            fill: $primary
+        .savd-uwqbj-sec
+            .fzamc
+                display: flex
+                justify-content: space-between
+                align-items: center
+                @include media(540) 
+                    flex-direction: column
+                    gap: 10px
+                .ttl-tkywa
+                    flex: 1
+                    padding-right: 1rem
+                    @include media(540) 
+                        padding-right: 0
+            .savd-addr-col-wrap
+                .savd-addr-col
+                    display: flex
+                    border: 1px solid #F3F3F3
+                    border-radius: 5px
+                    padding: 28px 16px
+                    gap: 13px
+                    position: relative
+                    &:not(:last-child)
+                        margin-bottom: 21px
+                    .cola-fgsqw
+                        line-height: 0
+                        input[type="radio"]
+                            @include radio(true)
+                    .colb-dtl-fwwz
+                        flex: 1
+                        color: $text
+                        font-size: 14px
+                        line-height: 18px
+                        .ahck-ttl
+                            font-size: 16px
+                            line-height: 19.68px
+                            color: $black
+                            margin-bottom: 20px
+                        .addr-erter
+                            margin-bottom: 20px
+                        .mbl-wef
+                            span
+                                color: $black
+                    .btn-etp-eew
+                        position: absolute
+                        bottom: 26px
+                        right: 20px
+                        .mbcw
+                            font-size: 15px
+                            text-transform: capitalize
+                            color: $primary
+                            &:not(:last-child)
+                                margin-right: 20px
+.checkout-tbl-xiuh
+    .ttl-tbl-bkfg
+        color: $black
+        margin-bottom: 16px
+    .pric-ing-gegc
+        li
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &:not(:last-child)
+                margin-bottom: 14px
+            *
+                font-size: 14px
+                line-height: 18px
+                color: $text
+    .ttl-amnt-tbl
+        border-top: 1px solid #D3D3D3
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 9px 0
+        margin: 22px 0
+        .ttl-txt,.ttl-prc-txt
+            color: $black
+    .checkbox-full 
+        margin-top: 20px
